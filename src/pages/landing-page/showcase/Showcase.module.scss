@@ -10,20 +10,22 @@
     flex: 1;
     min-width: 25rem;
     margin: 5% 0;
+
+    & h2 {
+        margin-bottom: 3rem;
+        max-width: 20rem;
+    }
+
+    & p {
+        max-width: 40rem;
+    }
 }
 
-.description h2 {
-    margin-bottom: 3rem;
-    max-width: 20rem;
-}
-
-.description p {
-    max-width: 40rem;
-}
 
 .image {
     flex: 1;
     min-width: 25rem;
+    max-width: 40rem;
     margin: 0 auto;
 }
 
@@ -34,13 +36,13 @@
 
     .description {
         text-align: center;
-    }
 
-    .description h2 {
-        max-width: 100%;
-    }
+        & h2 {
+            max-width: 100%;
+        }
 
-    .description p {
-        max-width: 100%;
+        & p {
+            max-width: 100%;
+        }
     }
 }

@@ -1,9 +1,0 @@
-.header {
-    display: flex;
-    justify-content: space-between
-}
-
-.header-actions {
-    display: flex;
-    column-gap: 1rem;
-}
