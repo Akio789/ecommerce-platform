@@ -4,7 +4,7 @@ import styles from './Header.module.css';
 
 const Header = () => {
   return (
-    <AppBar>
+    <AppBar position="static">
       <Toolbar className={styles.header}>
         <Typography variant="h6">
           Ecommerce Platform
