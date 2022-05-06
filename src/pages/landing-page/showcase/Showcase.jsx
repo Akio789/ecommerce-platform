@@ -13,6 +13,7 @@ const Showcase = () => {
           Repellat beatae tempore necessitatibus eos ad unde veniam
           consequatur debitis ratione provident maxime, ab aliquid
           similique excepturi, voluptates non dolores voluptatem eligendi.
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos, eum.
         </p>
       </div>
       <img

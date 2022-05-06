@@ -1,18 +1,20 @@
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 5rem 5%;
-    column-gap: 2rem;
-    row-gap: 1rem;
+    display: grid;
+    grid-template-areas: 
+    "description image";
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    padding-top: 5rem;
 }
 
 .description {
-    flex: 1;
-    min-width: 25rem;
-    margin: 5% 0;
+    grid-area: description;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
 
     & h2 {
-        margin-bottom: 3rem;
         max-width: 20rem;
     }
 
@@ -23,26 +25,24 @@
 
 
 .image {
-    flex: 1;
-    min-width: 25rem;
-    max-width: 40rem;
-    margin: 0 auto;
+    grid-area: image;
+    width: 75%;
 }
 
 @media only screen and (max-width: 900px) {
     .container {
-        padding: 3rem 5%;
+        grid-template-areas: 
+        "description"
+        "image";
+        grid-template-columns: 1fr;
+        row-gap: 4rem;
     }
 
     .description {
         text-align: center;
 
         & h2 {
-            max-width: 100%;
-        }
-
-        & p {
-            max-width: 100%;
+            margin: 0 auto;
         }
     }
 }
