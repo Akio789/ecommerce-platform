@@ -5,6 +5,7 @@ import styles from './Header.module.scss';
 const Header = () => {
   return (
     <Navbar
+      sticky="top"
       bg="primary"
       variant="dark"
       expand="lg"

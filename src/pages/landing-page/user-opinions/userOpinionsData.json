@@ -1,0 +1,12 @@
+[
+    {
+        "user": "Roberto Pérez",
+        "userType": "Dueño de negocio",
+        "opinion": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel, excepturi!"
+    },
+    {
+        "user": "Manuel Ortiz",
+        "userType": "Cliente",
+        "opinion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta reiciendis fugiat illum, illo velit voluptate optio dolorum."
+    }
+]
