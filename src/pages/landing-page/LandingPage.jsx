@@ -4,6 +4,7 @@ import Header from './header/Header';
 import Showcase from './showcase/Showcase';
 import FeatureHighlights from './feature-highlights/FeatureHighlights';
 import UserOpinions from './user-opinions/UserOpinions';
+import Footer from './footer/Footer';
 
 const LandingPage = () => {
   return (
@@ -14,6 +15,7 @@ const LandingPage = () => {
         <FeatureHighlights />
         <UserOpinions />
       </Container>
+      <Footer />
     </div>
   );
 }
