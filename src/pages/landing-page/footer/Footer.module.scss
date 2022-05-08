@@ -1,7 +1,5 @@
-@import "~bootstrap/scss/bootstrap";
-
 .footer {
-    background-color: $primary;
+    background-color: var(--primary);
     display: grid;
     grid-template-areas:
     "copyright brand terms";
