@@ -1,0 +1,10 @@
+@import "~bootstrap/scss/bootstrap";
+
+:root {
+    --primary: #{$blue};
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+}

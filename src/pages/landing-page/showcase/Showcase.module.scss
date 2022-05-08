@@ -1,0 +1,48 @@
+.container {
+    display: grid;
+    grid-template-areas: 
+    "description image";
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    padding-top: 7.5rem;
+}
+
+.description {
+    grid-area: description;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+    & h2 {
+        max-width: 20rem;
+    }
+
+    & p {
+        max-width: 40rem;
+    }
+}
+
+
+.image {
+    grid-area: image;
+    width: 85%;
+}
+
+@media only screen and (max-width: 900px) {
+    .container {
+        grid-template-areas: 
+        "description"
+        "image";
+        grid-template-columns: 1fr;
+        row-gap: 4rem;
+    }
+
+    .description {
+        text-align: center;
+
+        & h2 {
+            margin: 0 auto;
+        }
+    }
+}

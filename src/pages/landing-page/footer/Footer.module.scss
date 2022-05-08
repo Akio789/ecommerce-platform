@@ -1,0 +1,49 @@
+.footer {
+    background-color: var(--primary);
+    display: grid;
+    grid-template-areas:
+    "copyright brand terms";
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    height: 3.5rem;
+    color: white;
+
+    & p {
+        margin: 0;
+    }
+}
+
+.copyright {
+    grid-area: copyright;
+}
+
+.brand {
+    grid-area: brand;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.terms {
+    grid-area: terms;
+    
+    & p span:first-child {
+        border-right: solid 2px white;
+    }
+    & p span {
+        padding: 0 0.5rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .footer {
+        grid-template-areas:
+        "copyright"
+        "brand"
+        "terms";
+        grid-template-columns: 1fr;
+        height: 7.5rem;
+        row-gap: 0.5rem;
+        padding: 0.5rem;
+    }
+}

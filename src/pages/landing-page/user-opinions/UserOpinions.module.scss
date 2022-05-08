@@ -1,0 +1,12 @@
+.carousel {
+    height: 20rem;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 6rem;
+    max-width: 45rem;
+    margin: 7.5rem auto 3rem auto;
+
+    &-item-opinion {
+        font-size: 0.85rem;
+    }
+}
