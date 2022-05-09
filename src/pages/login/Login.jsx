@@ -21,7 +21,7 @@ const Login = () => {
   const onButtonClicked = () => {
     setEmailError();
     if (!validateEmail(email)) {
-      setEmailError('Por favor ingresa un email valido.');
+      setEmailError('Por favor ingresa un email válido.');
       return;
     }
     console.log(`Email: ${email}, Password: ${password}`);
