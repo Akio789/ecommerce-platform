@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { TextField } from '@mui/material';
 import { Button } from 'react-bootstrap';
 import Header from '../landing-page/header/Header';
-import { validateEmail } from '../../util/email';
 import styles from './Login.module.scss';
+import { validateForm } from './login-helpers';
 
 const Login = () => {
   const [email, setEmail] = useState('');
-  const [emailError, setEmailError] = useState();
   const [password, setPassword] = useState('');
+  const [errors, setErrors] = useState({});
 
   const onEmailChange = ({ target: { value } }) => {
     setEmail(value);
@@ -19,9 +19,9 @@ const Login = () => {
   }
 
   const onButtonClicked = () => {
-    setEmailError();
-    if (!validateEmail(email)) {
-      setEmailError('Por favor ingresa un email válido.');
+    const formErrors = validateForm(email, password);
+    setErrors(formErrors);
+    if (Object.keys(formErrors).length > 0) {
       return;
     }
     console.log(`Email: ${email}, Password: ${password}`);
@@ -39,8 +39,8 @@ const Login = () => {
           className={styles.input}
           onChange={onEmailChange}
           value={email}
-          error={!!emailError}
-          helperText={emailError}
+          error={!!errors.email}
+          helperText={errors.email}
         />
         <TextField
           variant="standard"
@@ -49,6 +49,8 @@ const Login = () => {
           className={styles.input}
           onChange={onPasswordChange}
           value={password}
+          error={!!errors.password}
+          helperText={errors.password}
         />
         <Button onClick={onButtonClicked}>
           Ingresa
