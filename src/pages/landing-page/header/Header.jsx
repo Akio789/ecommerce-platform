@@ -6,6 +6,10 @@ import styles from './Header.module.scss';
 const Header = () => {
   const navigate = useNavigate();
 
+  const onBrandClicked = () => {
+    navigate('/');
+  }
+
   const onLoginButtonClicked = () => {
     navigate('/login');
   }
@@ -18,7 +22,12 @@ const Header = () => {
       expand="lg"
       className={styles.header}
     >
-      <Navbar.Brand>Ecommerce Platform</Navbar.Brand>
+      <Navbar.Brand
+        className={styles.brand}
+        onClick={onBrandClicked}
+      >
+        Ecommerce Platform
+      </Navbar.Brand>
       <Navbar.Toggle />
       <Navbar.Collapse>
         <Nav
@@ -29,10 +38,14 @@ const Header = () => {
               variant="outline-light"
               onClick={onLoginButtonClicked}
             >
-              Login
+              Ingresa
             </Button>
           </Nav.Link>
-          <Nav.Link><Button variant="outline-light">Sign Up</Button></Nav.Link>
+          <Nav.Link>
+            <Button variant="outline-light">
+              Regístrate
+            </Button>
+          </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar >
