@@ -3,6 +3,10 @@
 
     &-actions {
         display: flex;
+
+        & p {
+            margin-bottom: 0;
+        }
     }
 }
 
