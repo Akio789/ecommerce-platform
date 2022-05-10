@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event'
 import { Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history'
 import Login from "./Login";
-import { REQUIRED_FIELD_ERROR_STR } from "../../constants";
+import { INVALID_EMAIL_ERROR_STR, REQUIRED_FIELD_ERROR_STR } from "../../constants";
 
 const history = createMemoryHistory();
 
@@ -51,7 +51,7 @@ describe('Login Page', () => {
     userEvent.type(emailInput, 'the_text');
     const loginButton = screen.getByRole('button', { name: 'Ingresa' });
     userEvent.click(loginButton);
-    const validationErrorMessage = screen.getByText('Por favor ingresa un email válido.');
+    const validationErrorMessage = screen.getByText(INVALID_EMAIL_ERROR_STR);
     expect(validationErrorMessage).toBeInTheDocument();
     // TODO: Validate function triggered by clicking button was not called
   });
