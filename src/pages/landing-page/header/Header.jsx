@@ -33,18 +33,18 @@ const Header = () => {
         <Nav
           className={`justify-content-end flex-grow-1 ${styles['header-actions']}`}
         >
-          <Nav.Link>
-            <Button
-              variant="outline-light"
+          <Nav.Link as="a">
+            <p
+              className="btn btn-outline-light"
               onClick={onLoginButtonClicked}
             >
               Ingresa
-            </Button>
+            </p>
           </Nav.Link>
-          <Nav.Link>
-            <Button variant="outline-light">
+          <Nav.Link as="a">
+            <p className="btn btn-outline-light">
               Regístrate
-            </Button>
+            </p>
           </Nav.Link>
         </Nav>
       </Navbar.Collapse>
