@@ -26,4 +26,7 @@ const validateForm = (email, password, confirmPassword) => {
   return errors;
 }
 
-export { validateForm };
+export {
+  validateForm,
+  PASSWORDS_DONT_MATCH_ERROR_STR
+};

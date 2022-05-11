@@ -1,9 +1,9 @@
-import { render, screen } from "@testing-library/react"
+import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history'
-import Login from "./Login";
-import { INVALID_EMAIL_ERROR_STR, REQUIRED_FIELD_ERROR_STR } from "../../constants";
+import Login from './Login';
+import { INVALID_EMAIL_ERROR_STR, REQUIRED_FIELD_ERROR_STR } from '../../constants';
 
 const history = createMemoryHistory();
 
@@ -45,7 +45,7 @@ describe('Login Page', () => {
     // TODO: Validate function triggered by clicking button was not called
   });
 
-  it('valdiates form - wrong email', () => {
+  it('valdiates form - invalid email', () => {
     renderComponent();
     const emailInput = screen.getByLabelText('Email');
     userEvent.type(emailInput, 'the_text');
@@ -64,6 +64,8 @@ describe('Login Page', () => {
     userEvent.type(passwordInput, 'the_password');
     const loginButton = screen.getByRole('button', { name: 'Ingresa' });
     userEvent.click(loginButton);
+    expect(screen.queryByText(REQUIRED_FIELD_ERROR_STR)).not.toBeInTheDocument();
+    expect(screen.queryByText(INVALID_EMAIL_ERROR_STR)).not.toBeInTheDocument();
     // TODO: Validate function triggered by clicking button was called
   });
 });
