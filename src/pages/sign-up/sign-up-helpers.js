@@ -21,7 +21,7 @@ const validateForm = (email, password, confirmPassword) => {
     errors.confirmPassword = REQUIRED_FIELD_ERROR_STR;
   }
   if (password !== confirmPassword) {
-    errors.confirmPassword = PASSWORDS_DONT_MATCH_ERROR_STR
+    errors.confirmPassword = PASSWORDS_DONT_MATCH_ERROR_STR;
   }
   return errors;
 }
