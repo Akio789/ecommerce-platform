@@ -24,4 +24,11 @@ describe('Landing Page', () => {
     userEvent.click(loginButton);
     expect(history.location.pathname).toBe('/login');
   });
+
+  it('sends to sign up form', () => {
+    renderComponent();
+    const signupButton = screen.getByText('Regístrate');
+    userEvent.click(signupButton);
+    expect(history.location.pathname).toBe('/sign-up');
+  });
 });

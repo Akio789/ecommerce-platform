@@ -14,6 +14,10 @@ const Header = () => {
     navigate('/login');
   }
 
+  const onSignUpButtonClicked = () => {
+    navigate('/sign-up');
+  }
+
   return (
     <Navbar
       sticky="top"
@@ -42,7 +46,10 @@ const Header = () => {
             </p>
           </Nav.Link>
           <Nav.Link as="a">
-            <p className="btn btn-outline-light">
+            <p
+              className="btn btn-outline-light"
+              onClick={onSignUpButtonClicked}
+            >
               Regístrate
             </p>
           </Nav.Link>

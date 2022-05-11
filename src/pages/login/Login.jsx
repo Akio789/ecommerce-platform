@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { TextField } from '@mui/material';
 import { Button } from 'react-bootstrap';
-import Header from '../landing-page/header/Header';
+import Header from '../../components/header/pre-login/Header';
 import styles from './Login.module.scss';
 import { validateForm } from './login-helpers';
 
 const Login = () => {
+  const navigate = useNavigate();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({});
@@ -24,7 +27,12 @@ const Login = () => {
     if (Object.keys(formErrors).length > 0) {
       return;
     }
+    // TODO: Call login API endpoint
     console.log(`Email: ${email}, Password: ${password}`);
+  }
+
+  const onDontHaveAnAccountClick = () => {
+    navigate('/sign-up');
   }
 
   return (
@@ -56,7 +64,10 @@ const Login = () => {
           Ingresa
         </Button>
         <p className={styles['sign-up']}>
-          No tienes cuenta? <span>Regístrate!</span>
+          No tienes una cuenta?&nbsp;
+          <span onClick={onDontHaveAnAccountClick}>
+            Regístrate!
+          </span>
         </p>
       </div>
     </div>
