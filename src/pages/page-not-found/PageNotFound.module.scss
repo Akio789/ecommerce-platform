@@ -1,0 +1,22 @@
+.container {
+    width: 25rem;
+    margin: 10rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.title {
+    font-size: 5rem;
+    font-weight: 300;
+}
+
+.text {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.button {
+    width: 50%;
+    margin: 0 auto;
+}

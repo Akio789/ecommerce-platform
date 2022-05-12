@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import LandingPage from "./pages/landing-page/LandingPage";
 import Login from './pages/login/Login';
 import SignUp from './pages/sign-up/SignUp';
+import PageNotFound from './pages/page-not-found/PageNotFound';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
@@ -19,6 +20,10 @@ const App = () => {
       <Route
         path="/sign-up"
         element={<SignUp />}
+      />
+      <Route
+        path="*"
+        element={<PageNotFound />}
       />
     </Routes>
   );
